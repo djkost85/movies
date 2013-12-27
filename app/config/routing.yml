@@ -1,0 +1,14 @@
+movies_widget:
+    resource: "@MoviesWidgetBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+movies_movie:
+    resource: "@MoviesMovieBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+movies_admin:
+    resource: "@MoviesAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /admin/

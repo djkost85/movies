@@ -1,0 +1,10 @@
+{% extends "::admin.html.twig" %}
+
+{% block body %}
+{% for widget in widgets %}
+{% if loop.index == 1 or loop.index % 3 == 0 %}
+{% endif %}	
+{{ widget.renderWidget|raw }}
+{% endfor %}
+</div>
+{% endblock %}

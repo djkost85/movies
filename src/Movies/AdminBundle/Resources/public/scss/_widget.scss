@@ -1,0 +1,32 @@
+.widget {
+	width:30%;
+	margin-right:3%;
+	float: left;
+	@include nav(0.3);
+
+	.widget-header, .widget-content {
+		padding:0 10px;
+
+		a {
+			font-size: 12px;
+			color: #fff;
+		}
+
+		.list-unstyled {
+			width:50%;
+			float: left;
+			display: block;
+		}
+
+		.list-widget {
+			padding-left: 20px;
+			li {
+				list-style-type: none;
+				line-height:50px;
+				img {
+					margin-right:5px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,178 @@
+body {
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	background:transparent url('../images/back.jpg');
+	font-weight: 300;
+	color: #fff;
+}
+
+#back-black {
+	position:fixed;
+	min-height:100%;
+	min-width:100%;
+	background: rgba(0,0,0,0.7);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	color: #fff;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.navbar, .nav.nav-stacked {
+	@include nav(0.3);
+	color: #fff;
+
+	a {
+		color: #fff;
+
+		&:hover, &:focus {
+			text-decoration: none;
+			@include nav(0.2);
+			border-radius: 0;
+		}
+	}
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+	text-decoration: none;
+	@include nav(0.2);
+	border-radius: 0;
+}
+
+.navbar.top {
+	height: 32px;
+	min-height: 32px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-width: 600px;
+	z-index: 99999;
+	border-radius:0;
+	a {
+		padding-top:5px;
+		padding-bottom:5px;
+	}
+}
+
+.nav.nav-stacked {
+	margin-top: 30px;
+	background: none;
+	clear: left;
+	margin: 12px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+#adminmenuwrap {
+	position: fixed;
+	z-index: 99;
+	float: left;
+	font-size: 0.85em;
+	font-weight: 300;
+	margin-top: 30px;
+
+	i {
+		padding-right:3px;
+		font-size: 0.85em;
+	}
+
+}
+
+#adminmenuback {
+	position: absolute;
+	top: 32px;
+	bottom: 0;
+	z-index: -1;
+	min-height:97%;
+	@include nav(0.3);
+}
+
+#adminmenuback, #adminmenuwrap, #adminmenu, #adminmenu .wp-submenu {
+	width: 160px;
+}
+
+.container-admin {
+	margin-top: 30px;
+}
+
+.form {
+	font-size: 14px;
+	label {
+		font-weight: 300;
+		display: block;
+		float: left;
+		width:100px;
+		padding-left: 5px;
+		line-height: 31px;
+		position: relative;
+		z-index:5;
+	}
+
+	input[type=text], input[type=number] {
+		width:160px;
+		display: block;
+		float: left;
+		height: 31px;
+		border: 1px solid #999;
+		margin-left: -100px;
+		border: 0;
+		@include nav(0.3);
+		border-right:1px solid rgba(0,0,0,0.2);
+		outline:0;
+		color: #fff;
+		font-family: 'Open Sans', Arial, sans-serif;
+		font-weight: 300;
+		margin-bottom: 5px;
+	}
+
+	button {
+		display: block;
+		float: left;
+		@include nav(0.3);
+		color: #fff;
+		font-size: 12px;
+		border-radius: 0;
+		&:active, &:focus {
+			outline: 0;
+		}
+	}
+	div {
+		width: auto;
+		display: block;
+		float: left;
+	}
+}
+
+table.table {
+	@include nav(0.3);
+	font-size: 12px;
+	th {
+		font-weight: 300;
+	}
+
+	thead>tr>th {
+		border-bottom: 1px solid rgba(0,0,0, 0.1);
+		
+	}
+
+	tbody>tr>td, thead>tr>th {
+		background-color: transparent !important;
+		background: none !important;
+		border-bottom: 1px solid rgba(0,0,0, 0.1);
+		padding:20px 10px;
+	}
+
+	a {
+		color: #fff;
+		font-weight: 300;
+	}
+
+}

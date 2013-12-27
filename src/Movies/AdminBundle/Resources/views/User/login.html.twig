@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AlloMovie</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+	{% stylesheets 'bundles/moviesadmin/css/*' filter='cssrewrite' %}
+	    <link rel="stylesheet" href="{{ asset_url }}" />
+	{% endstylesheets %}
+	{% block stylesheets %}{% endblock stylesheets %}
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	{% block scripts %}{% endblock scripts %}
+</head>
+<body class="login">
+	<div id="login">
+		<img src="{{ asset('bundles/moviesadmin/images/logo.png') }}" alt="Logo" title="Logo" width="200px" />
+		{% if error %}
+			<div class="alert alert-danger alert-dismissable">
+				<button class="close" data-dismiss="alert" type="button">×</button>
+				{{ error.message }}
+			</div>
+		{% endif %}
+		<form action="{{ path('login_check') }}" method="post" autocomplete="off">
+			<label for="username">Username:
+			<input type="text" id="username" name="_username" value="{{ last_username }}" />
+			</label> 
+			<label for="password">Password:
+			<input type="password" id="password" name="_password" />
+			</label> 
+			<div class="remember">
+				<label for="remember_me">
+				<input type="checkbox" id="remember_me" name="_remember_me" checked />
+				Keep me logged in</label>
+			</div>
+			<input type="hidden" name="_target_path" value="/admin/dashboard" />
+			<input type="submit" name="login" class="btn-login" value="Valider" />
+
+		</form>
+		<div class="clearfix"></div>
+	</div>
+</body>
+</html>

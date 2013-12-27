@@ -1,0 +1,9 @@
+$orchid: #c86ba8;
+$orchid-dark: darken($orchid, 15%);
+$nav-color: rgba(0,0,0, 0.5);
+
+$main: $orchid;
+
+@mixin nav($opacity: 0.5) {
+	background-color: rgba(0,0,0, $opacity);
+}
